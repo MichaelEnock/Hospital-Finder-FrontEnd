@@ -33,14 +33,14 @@ export function Sidebar({
       <div className="flex-1 overflow-y-auto space-y-4">
         {/* Location Section */}
         <div className="bg-gray-100 p-4 rounded-lg">
-          <h3 className="text-blue-600 font-semibold mb-3">📍 Your Location</h3>
+          <h3 className="text-blue-600 font-semibold mb-3">Your Location</h3>
           
           {/* Geolocation Button */}
           <button
             onClick={onUseMyLocation}
             className="w-full flex items-center justify-center px-4 py-2 mb-3 bg-green-600 hover:bg-green-700 text-white rounded transition-colors"
           >
-            <span className="mr-2">📍</span>Use My Current Location
+            <span className="mr-2"></span>Use My Current Location
           </button>
 
           {/* Search Input */}
