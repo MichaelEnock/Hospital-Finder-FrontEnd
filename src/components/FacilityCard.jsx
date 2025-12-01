@@ -6,7 +6,7 @@ export function FacilityCard({ facility, index, onRoute }) {
       </h3>
       
       <p className="text-[#B0B0B0] text-sm mb-1">
-        📍 {facility.type} • {facility.district}
+         {facility.type} • {facility.district}
       </p>
       
       <p className="text-[#B0B0B0] text-sm mb-2">
@@ -15,7 +15,7 @@ export function FacilityCard({ facility, index, onRoute }) {
 
       {facility.distance && (
         <div className="text-purple-400 font-bold text-base mb-2">
-          🎯 {facility.distance}
+           {facility.distance}
         </div>
       )}
 
