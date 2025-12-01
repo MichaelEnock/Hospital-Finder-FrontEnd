@@ -1,18 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import MapContainer from './components/MapContainer'
+import React from 'react';
+import MalawiHealthFinder from './components/MalawiHealthFinder';
+import './index.css';
 
 function App() {
-  return (
-    <div className="w-full justify-center h-screen">
-      <MapContainer />
-      
-    </div>
-  );
- 
+  return <MalawiHealthFinder />;
 }
 
-
-export default App
+export default App;
