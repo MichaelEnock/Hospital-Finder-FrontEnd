@@ -1,15 +1,15 @@
 export function FacilityCard({ facility, index, onRoute }) {
   return (
-    <div className="bg-[#1A1A1A] p-4 rounded-lg hover:bg-[#222222] transition-colors border-l-4 border-green-500">
-      <h3 className="text-[#E0E0E0] font-bold text-base mb-1">
+    <div className="bg-white p-4 rounded-lg shadow-lg border-l-4 border-green-500">
+      <h3 className="text-black font-bold text-base mb-1">
         {index !== undefined && `${index + 1}. `}{facility.name}
       </h3>
       
-      <p className="text-[#B0B0B0] text-sm mb-1">
+      <p className="text-black text-sm mb-1">
          {facility.type} • {facility.district}
       </p>
       
-      <p className="text-[#B0B0B0] text-sm mb-2">
+      <p className="text-black text-sm mb-2">
         👥 {facility.ownership}
       </p>
 
@@ -21,16 +21,16 @@ export function FacilityCard({ facility, index, onRoute }) {
 
       {/* Services */}
       {facility.services && facility.services.length > 0 && (
-        <div className="mt-2 p-2 bg-[#2A2A2A] rounded">
-          <h4 className="text-purple-400 text-xs font-semibold mb-1">🏥 Services:</h4>
+        <div className="mt-2 p-2 rounded">
+          <h4 className="text-black text-xs font-semibold mb-1">🏥 Services:</h4>
           <div className="space-y-0.5">
             {facility.services.slice(0, 4).map((svc, idx) => (
-              <div key={idx} className="text-[#B0B0B0] text-xs">
+              <div key={idx} className="text-black text-xs">
                 • {svc}
               </div>
             ))}
             {facility.services.length > 4 && (
-              <div className="text-[#B0B0B0] text-xs">• And more...</div>
+              <div className="text-black text-xs">• And more...</div>
             )}
           </div>
         </div>
@@ -38,8 +38,8 @@ export function FacilityCard({ facility, index, onRoute }) {
 
       {/* Working Hours */}
       {facility.working_hours && (
-        <div className="mt-2 p-2 bg-orange-900 bg-opacity-30 rounded text-xs">
-          <div className="text-orange-300">
+        <div className="mt-2 p-2 rounded text-xs">
+          <div className="text-black">
             <strong>🕐 Hours:</strong><br />
             Weekdays: {facility.working_hours.weekdays || 'N/A'}<br />
             {facility.working_hours.saturday && `Saturday: ${facility.working_hours.saturday}`}<br />
@@ -53,7 +53,7 @@ export function FacilityCard({ facility, index, onRoute }) {
         onClick={() => onRoute(facility)}
         className="w-full mt-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-3 py-2 rounded transition-colors"
       >
-        🗺️ Show Route
+        Show Route
       </button>
     </div>
   );
